@@ -3,28 +3,25 @@
 <link rel="stylesheet" type="text/css" href="../sty.css">
 </head>
 <body>
-<a href="../index.php">На главную</a>
+<a href="../index.php">ГЌГ  ГЈГ«Г ГўГ­ГіГѕ</a>
 <?php
-/////////////////////////////////////////////
-//(C) Автор скрипта Денис Шашкин aka Chapay
-/////////////////////////////////////////////
 require_once ("config.php");
   if(isset($_GET['start'])) $start = $_GET['start'];
   else $start = "";
-  // Стартовая точка
+  // Г‘ГІГ Г°ГІГ®ГўГ Гї ГІГ®Г·ГЄГ 
   if (empty($start)) $start = 0;
-  // Стартовая точка не может быть меньше нуля
+  // Г‘ГІГ Г°ГІГ®ГўГ Гї ГІГ®Г·ГЄГ  Г­ГҐ Г¬Г®Г¦ГҐГІ ГЎГ»ГІГј Г¬ГҐГ­ГјГёГҐ Г­ГіГ«Гї
   if ($start < 0) $start = 0;
   $query = "SELECT count(*) FROM board";
   $tot = mysql_query($query);
   $query = "SELECT * FROM board ORDER BY puttime DESC LIMIT $start, $number";
   $thm = mysql_query($query);
   $count= mysql_result($tot,0);
-  if ($start > 0)  echo "<a href=index.php?start=".($start-$number).">Предыдущие</A>";
-  if ($count > $start + $number)  echo " <a href=index.php?start=".($start + $number).">Следующие</A>";
+  if ($start > 0)  echo "<a href=index.php?start=".($start-$number).">ГЏГ°ГҐГ¤Г»Г¤ГіГ№ГЁГҐ</A>";
+  if ($count > $start + $number)  echo " <a href=index.php?start=".($start + $number).">Г‘Г«ГҐГ¤ГіГѕГ№ГЁГҐ</A>";
   while($board = mysql_fetch_array($thm))
   {
-    // Извлекаем переменные из базы данных
+    // Г€Г§ГўГ«ГҐГЄГ ГҐГ¬ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»ГҐ ГЁГ§ ГЎГ Г§Г» Г¤Г Г­Г­Г»Гµ
     $contact = trim($board['contact']);
     $type = trim($board['type']);
     $city = trim($board['city']);
@@ -35,39 +32,39 @@ require_once ("config.php");
 
   switch($type)
     {
-            case 1: if($board['type'] = "1") $type = "Куплю";
+            case 1: if($board['type'] = "1") $type = "ГЉГіГЇГ«Гѕ";
             break;
-            case 2: if($board['type'] = "2") $type = "Продам";
+            case 2: if($board['type'] = "2") $type = "ГЏГ°Г®Г¤Г Г¬";
             break;
-            case 3: if($board['type'] = "3") $type = "Сниму в аренду";
+            case 3: if($board['type'] = "3") $type = "Г‘Г­ГЁГ¬Гі Гў Г Г°ГҐГ­Г¤Гі";
             break;
-            case 4: if($board['type'] = "4") $type = "Сдаю в аренду";
+            case 4: if($board['type'] = "4") $type = "Г‘Г¤Г Гѕ Гў Г Г°ГҐГ­Г¤Гі";
             break;
-            case 5: if($board['type'] = "5") $type = "Поменяю";
+            case 5: if($board['type'] = "5") $type = "ГЏГ®Г¬ГҐГ­ГїГѕ";
             break;
             case 6: if($board['type'] = "6") $type = "";
     }
         switch($object)
     {
-            case 1: if($board['object'] = "1") $object = "квартиру";
+            case 1: if($board['object'] = "1") $object = "ГЄГўГ Г°ГІГЁГ°Гі";
             break;
-            case 2: if($board['object'] = "2") $object = "Комнату";
+            case 2: if($board['object'] = "2") $object = "ГЉГ®Г¬Г­Г ГІГі";
             break;
-            case 3: if($board['object'] = "3") $object = "Дом";
+            case 3: if($board['object'] = "3") $object = "Г„Г®Г¬";
             break;
-            case 4: if($board['object'] = "4") $object = "Дачу";
+            case 4: if($board['object'] = "4") $object = "Г„Г Г·Гі";
             break;
-            case 5: if($board['object'] = "5") $object = "Земельный участок";
+            case 5: if($board['object'] = "5") $object = "Г‡ГҐГ¬ГҐГ«ГјГ­Г»Г© ГіГ·Г Г±ГІГ®ГЄ";
             break;
-            case 6: if($board['object'] = "6") $object = "Офис";
+            case 6: if($board['object'] = "6") $object = "ГЋГґГЁГ±";
             break;
-            case 7: if($board['object'] = "7") $object = "Магазин";
+            case 7: if($board['object'] = "7") $object = "ГЊГ ГЈГ Г§ГЁГ­";
             break;
-            case 8: if($board['object'] = "8") $object = "Производство";
+            case 8: if($board['object'] = "8") $object = "ГЏГ°Г®ГЁГ§ГўГ®Г¤Г±ГІГўГ®";
             break;
-            case 9: if($board['object'] = "9") $object = "Склад";
+            case 9: if($board['object'] = "9") $object = "Г‘ГЄГ«Г Г¤";
             break;
-            case 10: if($board['object'] = "10") $object = "Гараж";
+            case 10: if($board['object'] = "10") $object = "ГѓГ Г°Г Г¦";
             break;
             case 11: if($board['object'] = "11") $object = "";
     }
@@ -77,9 +74,9 @@ require_once ("config.php");
 <table width='80%' class='menu_up'>
     <tr class='menu_up'>
       <td width="25%"><?php echo $contact; ?></td>
-      <td width="25%"><b>Описание:</b> <?php echo $type; ?> <?php echo $object; ?></td>
-      <td width="25%"><b>Город:</b> <?php echo $city; ?></td>
-      <td width="25%" align='right'><b>Дата:</b> <? echo $board['puttime']; ?></td>
+      <td width="25%"><b>ГЋГЇГЁГ±Г Г­ГЁГҐ:</b> <?php echo $type; ?> <?php echo $object; ?></td>
+      <td width="25%"><b>ГѓГ®Г°Г®Г¤:</b> <?php echo $city; ?></td>
+      <td width="25%" align='right'><b>Г„Г ГІГ :</b> <? echo $board['puttime']; ?></td>
     </tr>
     <tr class='menu_down'>
         <td colspan=4><? echo $msg; ?><br>
@@ -89,14 +86,14 @@ require_once ("config.php");
 <?php
 if($board['hide'] == 'show')
 {
-$showhide = "<a href=hide.php?id_msg=".$board['id_msg']."&start=$start>Скрыть</a>";
+$showhide = "<a href=hide.php?id_msg=".$board['id_msg']."&start=$start>Г‘ГЄГ°Г»ГІГј</a>";
 }
 else
 {
-$showhide = "<a href=show.php?id_msg=".$board['id_msg']."&start=$start>Отобразить</a>";
+$showhide = "<a href=show.php?id_msg=".$board['id_msg']."&start=$start>ГЋГІГ®ГЎГ°Г Г§ГЁГІГј</a>";
 }
-echo "<a href=del.php?id_msg=".$board['id_msg']."&start=$start>Удалить</a>&nbsp;&nbsp;";
-echo "<a href=editform.php?id_msg=".$board['id_msg']."&start=$start>Редактировать</a>&nbsp;&nbsp;";
+echo "<a href=del.php?id_msg=".$board['id_msg']."&start=$start>Г“Г¤Г Г«ГЁГІГј</a>&nbsp;&nbsp;";
+echo "<a href=editform.php?id_msg=".$board['id_msg']."&start=$start>ГђГҐГ¤Г ГЄГІГЁГ°Г®ГўГ ГІГј</a>&nbsp;&nbsp;";
 echo $showhide;
 
 ?>
