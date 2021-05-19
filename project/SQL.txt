@@ -1,0 +1,11 @@
+CREATE TABLE `board` (
+  `id_msg` int(8) NOT NULL auto_increment,
+  `contact` tinytext NOT NULL,
+  `type` ENUM('1','2','3','4', '5', '6', '7') default '2',
+  `object`ENUM('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12') default '1',
+  `city` tinytext NOT NULL,
+  `msg` mediumtext NOT NULL,
+  `puttime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `hide` enum('show','hide') NOT NULL default 'show',
+  PRIMARY KEY  (`id_msg`)
+) TYPE=MyISAM;

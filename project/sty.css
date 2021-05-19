@@ -1,0 +1,111 @@
+.addform {
+	border: 1px;
+        background-color: #fff;
+        color: #3667AC;
+        width: 165px;
+	font-family: verdana,tahoma,arial,helvetica,sans-serif;
+	font-size: 9px;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+	text-decoration: none;
+        padding: 0px;
+}
+
+.filter {
+	border: 1px;
+        background-color: #3667AC;
+        color: #fff;
+        width: 165px;
+	font-family: verdana,tahoma,arial,helvetica,sans-serif;
+	font-size: 9px;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+	text-decoration: none;
+        padding: 0px;
+}
+
+.input {
+	border: 0px;
+        background-color: #3667AC;
+        color: #fff;
+	font-family: verdana,tahoma,arial,helvetica,sans-serif;
+	font-size: 12px;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+	text-decoration: none;
+        padding: 0px;
+}
+
+.top {
+	border: #3667AC 2px solid;
+        color: #3667AC;
+	font-family: verdana,tahoma,arial,helvetica,sans-serif;
+	font-size: 9px;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+	padding-top: 2px;
+	text-decoration: none;
+}
+
+a {
+        color: #3667AC;
+	font-family: verdana,tahoma,arial,helvetica,sans-serif;
+	font-size: 9px;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+	padding-top: 2px;
+	text-decoration: none;
+        font-weight: bold
+}
+
+.menu_up {
+	border: 0px;
+        background-color: #3667AC;
+        color: #fff;
+	font-family: verdana,tahoma,arial,helvetica,sans-serif;
+	font-size: 9px;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+	text-decoration: none;
+        padding: 0px;
+}
+
+.menu_down {
+	border: 0px;
+        background-color: #fff;
+        padding: 0px;
+        color: #3667AC;
+	font-family: verdana,tahoma,arial,helvetica,sans-serif;
+	font-size: 9px;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+	text-decoration: none;
+}
