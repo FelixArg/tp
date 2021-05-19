@@ -1,13 +1,10 @@
 <html>
 <head>
-<title>:: Доска объявлений :: Редактирование объявления</title>
+<title>:: Г„Г®Г±ГЄГ  Г®ГЎГєГїГўГ«ГҐГ­ГЁГ© :: ГђГҐГ¤Г ГЄГІГЁГ°Г®ГўГ Г­ГЁГҐ Г®ГЎГєГїГўГ«ГҐГ­ГЁГї</title>
 </head>
 <link rel="stylesheet" type="text/css" href="../sty.css">
 <body>
 <?php
-/////////////////////////////////////////////
-//(C) Автор скрипта Денис Шашкин aka Chapay
-/////////////////////////////////////////////
   require_once "config.php";
   $id_msg = $_GET['id_msg'];
   $start = $_GET['start'];
@@ -16,27 +13,27 @@
    $brd = mysql_query($query);
   if ($brd)
   {
-    // Преобразуем полученную информацию в ассоциативный массив
+    // ГЏГ°ГҐГ®ГЎГ°Г Г§ГіГҐГ¬ ГЇГ®Г«ГіГ·ГҐГ­Г­ГіГѕ ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГѕ Гў Г Г±Г±Г®Г¶ГЁГ ГІГЁГўГ­Г»Г© Г¬Г Г±Г±ГЁГў
     $board = mysql_fetch_array($brd);
   }
-  else echo "Ошибка при обращении к доске объявлений";
+  else echo "ГЋГёГЁГЎГЄГ  ГЇГ°ГЁ Г®ГЎГ°Г Г№ГҐГ­ГЁГЁ ГЄ Г¤Г®Г±ГЄГҐ Г®ГЎГєГїГўГ«ГҐГ­ГЁГ©";
   $msg = $board['msg'];
   ?>
-<center><p><a href="admin.php">Вернуться к администрированию доски объявлений</a></p></center>
+<center><p><a href="admin.php">Г‚ГҐГ°Г­ГіГІГјГ±Гї ГЄ Г Г¤Г¬ГЁГ­ГЁГ±ГІГ°ГЁГ°Г®ГўГ Г­ГЁГѕ Г¤Г®Г±ГЄГЁ Г®ГЎГєГїГўГ«ГҐГ­ГЁГ©</a></p></center>
 <form action="edit.php" method=post>
 <table class='menu_up' align=center>
 <tr class='menu_up'>
-<td colspan=2><b>Редактирование объявления</b>
+<td colspan=2><b>ГђГҐГ¤Г ГЄГІГЁГ°Г®ГўГ Г­ГЁГҐ Г®ГЎГєГїГўГ«ГҐГ­ГЁГї</b>
 </td>
 </tr>
 <tr class='menu_down'>
 <td width=200 height=21 valign=top align=right>
-Объявление:
+ГЋГЎГєГїГўГ«ГҐГ­ГЁГҐ:
 </td>
 <td  height=21><textarea name=msg value="" rows=10 cols=37><?php echo $msg; ?></textarea></td></tr>
 <tr class='menu_down'>
 <td height=21 colspan=2 align=center>
-<input type=submit value=Исправить name=B1>
+<input type=submit value=Г€Г±ГЇГ°Г ГўГЁГІГј name=B1>
 <input type=hidden name=id_msg value=<?php echo $id_msg; ?>>
 <input type=hidden name=start value=<?php echo $start; ?>></td></tr></table></form>
   </td>
