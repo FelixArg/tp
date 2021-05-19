@@ -1,7 +1,4 @@
 <?php
-/////////////////////////////////////////////
-//(C) Автор скрипта Денис Шашкин aka Chapay
-/////////////////////////////////////////////
 require_once("admin/config.php");
 
 $contact = $_POST['contact'];
@@ -13,12 +10,12 @@ $msg = $_POST['msg'];
 
 if(empty($contact))
 {
-        echo "Вы не ввели ни одного контакта!\n <br><a href=addform.php>Назад</a>";
+        echo "Г‚Г» Г­ГҐ ГўГўГҐГ«ГЁ Г­ГЁ Г®Г¤Г­Г®ГЈГ® ГЄГ®Г­ГІГ ГЄГІГ !\n <br><a href=addform.php>ГЌГ Г§Г Г¤</a>";
         exit();
 }
 if(empty($msg))
 {
-        echo "Вы не ввели объявление!\n <br><a href=addform.php>Назад</a>";
+        echo "Г‚Г» Г­ГҐ ГўГўГҐГ«ГЁ Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ!\n <br><a href=addform.php>ГЌГ Г§Г Г¤</a>";
         exit();
 }
 
@@ -32,12 +29,12 @@ if(empty($msg))
                                      'show');";
 if(mysql_query($query))
 {
-        echo "Ваше объявление успешно добавлено";
+        echo "Г‚Г ГёГҐ Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ ГіГ±ГЇГҐГёГ­Г® Г¤Г®ГЎГ ГўГ«ГҐГ­Г®";
 print "<HTML><HEAD>\n";
       print "<META HTTP-EQUIV='Refresh' CONTENT='1; URL=index.php'>\n";
       print "</HEAD></HTML>\n";
 }
-else echo "Ваше объявление не добавлено";
+else echo "Г‚Г ГёГҐ Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ Г­ГҐ Г¤Г®ГЎГ ГўГ«ГҐГ­Г®";
 
 
 ?>
